@@ -11,12 +11,21 @@ declare global {
   }
 }
 
-/** Requires a valid lms_token cookie or Bearer header token. 401 otherwise. */
+/** Requires a valid Bearer header token or lms_token cookie. 401 otherwise. */
 export function requireAuth(req: Request, res: Response, next: NextFunction) {
-  let token = req.cookies?.lms_token as string | undefined;
-  if (!token && req.headers.authorization?.startsWith("Bearer ")) {
-    token = req.headers.authorization.slice(7).trim();
+  let token: string | undefined;
+
+  // 1. Prioritize Authorization header (guaranteed cross-origin support e.g. Vercel -> Railway)
+  const authHeader = req.headers.authorization;
+  if (authHeader && authHeader.toLowerCase().startsWith("bearer ")) {
+    token = authHeader.slice(7).trim();
   }
+
+  // 2. Fallback to HTTP-only cookie for same-origin / local development
+  if (!token) {
+    token = req.cookies?.lms_token as string | undefined;
+  }
+
   if (!token) {
     return sendError(res, "Sesi berakhir, silakan login kembali", 401);
   }
