@@ -1,0 +1,29 @@
+[
+  {
+    "id": "crs-1",
+    "code": "IF101",
+    "name": "Pemrograman Dasar",
+    "sks": 3,
+    "studyProgramId": "sp-1",
+    "type": "Wajib",
+    "description": "Dasar pemrograman, algoritma, dan logika."
+  },
+  {
+    "id": "crs-2",
+    "code": "IF202",
+    "name": "Struktur Data",
+    "sks": 3,
+    "studyProgramId": "sp-1",
+    "type": "Wajib",
+    "description": "Array, linked list, stack, queue, tree, graph."
+  },
+  {
+    "id": "crs-3",
+    "code": "SI101",
+    "name": "Dasar Sistem Informasi",
+    "sks": 3,
+    "studyProgramId": "sp-2",
+    "type": "Wajib",
+    "description": "Pengantar sistem informasi dan organisasi."
+  }
+]

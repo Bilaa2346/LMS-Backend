@@ -1,0 +1,47 @@
+[
+  {
+    "id": "usr-admin",
+    "email": "admin@kampus.ac.id",
+    "password": "$2a$10$IG4ZmONyPm3Ix6w9cYLSW.Ykrs1PtfLjGyTpnFMKQvDg.FAagvZFC",
+    "role": "admin",
+    "name": "Admin BAAK",
+    "refId": null,
+    "createdAt": "2026-11-21T08:24:55.958Z"
+  },
+  {
+    "id": "usr-lec-1",
+    "email": "dosen@kampus.ac.id",
+    "password": "$2a$10$4ky8nqWQDgSInKDFGvrrE.qpHNS8lrR/..zXmQtJCfIo0GQ.aJdCi",
+    "role": "lecturer",
+    "name": "Dr. Budi Santoso, M.Kom.",
+    "refId": "lec-1",
+    "createdAt": "2026-11-21T08:24:55.958Z"
+  },
+  {
+    "id": "usr-lec-2",
+    "email": "dosen2@kampus.ac.id",
+    "password": "$2a$10$ccsS0cXKPV9eXPs4om514.m6A9EcQKJT0TxELOdFS4GRbj3a1K//.",
+    "role": "lecturer",
+    "name": "Dr. Siti Rahmawati, M.T.",
+    "refId": "lec-2",
+    "createdAt": "2026-11-21T08:24:55.958Z"
+  },
+  {
+    "id": "usr-stu-1",
+    "email": "mahasiswa@kampus.ac.id",
+    "password": "$2a$10$z3utFOXXxKf6iRqau5eZbu9QbnGN3DLDGZYfnB1QzlZjExCl4.XuW",
+    "role": "student",
+    "name": "Andi Pratama",
+    "refId": "stu-1",
+    "createdAt": "2026-11-21T08:24:55.958Z"
+  },
+  {
+    "id": "usr-stu-2",
+    "email": "mahasiswa2@kampus.ac.id",
+    "password": "$2a$10$7vsJeJQxqgHcksqTYv8RIuJaLiPwc.of3WfDHQLuWyhcZFq04L1xe",
+    "role": "student",
+    "name": "Dewi Lestari",
+    "refId": "stu-2",
+    "createdAt": "2026-11-21T08:24:55.958Z"
+  }
+]

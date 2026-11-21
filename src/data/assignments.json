@@ -1,0 +1,32 @@
+[
+  {
+    "id": "asg-1",
+    "courseId": "crs-1",
+    "courseName": "Pemrograman Dasar",
+    "studyProgramId": "sp-1",
+    "studyProgramName": "Teknik Informatika",
+    "lecturerId": "lec-1",
+    "lecturerName": "Dr. Budi Santoso, M.Kom.",
+    "title": "Tugas 1: Analisis Kompleksitas & Algoritma Rekursif",
+    "description": "Implementasikan fungsi rekursif untuk faktorial, deret fibonacci, dan simulasi menara Hanoi dalam bahasa C / Python. Sertakan analisis kompleksitas Big-O untuk tiap fungsi.",
+    "dueDate": "2026-11-28T23:59:59.000Z",
+    "maxScore": 100,
+    "attachmentLink": "https://drive.google.com/sample-modul-tugas1",
+    "createdAt": "2026-11-21T08:24:55.958Z"
+  },
+  {
+    "id": "asg-2",
+    "courseId": "crs-2",
+    "courseName": "Struktur Data",
+    "studyProgramId": "sp-1",
+    "studyProgramName": "Teknik Informatika",
+    "lecturerId": "lec-1",
+    "lecturerName": "Dr. Budi Santoso, M.Kom.",
+    "title": "Tugas 2: Implementasi Binary Search Tree & Graph",
+    "description": "Buatlah program struktur data Binary Search Tree lengkap dengan operasi insert, search, delete, dan transversal inorder, preorder, serta postorder. Berikan contoh kasus dan tangkapan layar eksekusi program.",
+    "dueDate": "2026-12-05T23:59:59.000Z",
+    "maxScore": 100,
+    "attachmentLink": "",
+    "createdAt": "2026-11-21T08:24:55.958Z"
+  }
+]

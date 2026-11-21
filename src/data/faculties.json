@@ -1,0 +1,12 @@
+[
+  {
+    "id": "fac-1",
+    "code": "FIK",
+    "name": "Fakultas Ilmu Komputer"
+  },
+  {
+    "id": "fac-2",
+    "code": "FEB",
+    "name": "Fakultas Ekonomi dan Bisnis"
+  }
+]

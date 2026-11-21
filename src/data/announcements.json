@@ -1,0 +1,18 @@
+[
+  {
+    "id": "ann-1",
+    "title": "Selamat Datang Semester Ganjil 2026/2027",
+    "content": "Perkuliahan dimulai 1 September 2026. Selamat belajar!",
+    "target": "semua",
+    "authorUserId": "usr-admin",
+    "createdAt": "2026-11-21T08:24:55.958Z"
+  },
+  {
+    "id": "ann-2",
+    "title": "Jadwal UTS",
+    "content": "UTS dilaksanakan pada minggu ke-8 semester.",
+    "target": "mahasiswa",
+    "authorUserId": "usr-admin",
+    "createdAt": "2026-11-21T08:24:55.958Z"
+  }
+]

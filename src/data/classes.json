@@ -1,0 +1,38 @@
+[
+  {
+    "id": "cls-1",
+    "courseId": "crs-1",
+    "lecturerId": "lec-1",
+    "semesterId": "sem-1",
+    "name": "A",
+    "day": "Senin",
+    "startTime": "08:00",
+    "endTime": "10:00",
+    "room": "R-101",
+    "capacity": 40
+  },
+  {
+    "id": "cls-2",
+    "courseId": "crs-2",
+    "lecturerId": "lec-2",
+    "semesterId": "sem-1",
+    "name": "A",
+    "day": "Selasa",
+    "startTime": "10:00",
+    "endTime": "12:00",
+    "room": "R-102",
+    "capacity": 35
+  },
+  {
+    "id": "cls-3",
+    "courseId": "crs-3",
+    "lecturerId": "lec-2",
+    "semesterId": "sem-1",
+    "name": "A",
+    "day": "Rabu",
+    "startTime": "13:00",
+    "endTime": "15:00",
+    "room": "R-103",
+    "capacity": 40
+  }
+]

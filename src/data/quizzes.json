@@ -1,0 +1,148 @@
+[
+  {
+    "id": "qiz-1",
+    "courseId": "crs-1",
+    "courseName": "Pemrograman Dasar",
+    "studyProgramId": "sp-1",
+    "studyProgramName": "Teknik Informatika",
+    "lecturerId": "lec-1",
+    "lecturerName": "Dr. Budi Santoso, M.Kom.",
+    "title": "Kuis 1: Konsep Dasar Pemrograman & Algoritma",
+    "type": "Kuis",
+    "description": "Kuis pengantar logika pemrograman dan struktur kontrol alur program.",
+    "startAt": "2026-09-10T08:00:00.000Z",
+    "endAt": "2027-01-31T23:59:59.000Z",
+    "durationMinutes": 30,
+    "published": true,
+    "questions": [
+      {
+        "id": "qst-1",
+        "text": "Manakah di bawah ini yang merupakan tipe data untuk bilangan bulat dalam pemrograman?",
+        "options": [
+          "float",
+          "int",
+          "char",
+          "boolean"
+        ],
+        "answerIndex": 1,
+        "points": 20
+      },
+      {
+        "id": "qst-2",
+        "text": "Struktur kontrol percabangan dalam bahasa C / Java menggunakan kata kunci?",
+        "options": [
+          "loop",
+          "if - else",
+          "function",
+          "class"
+        ],
+        "answerIndex": 1,
+        "points": 20
+      },
+      {
+        "id": "qst-3",
+        "text": "Kompleksitas waktu terbaik dari pencarian Binary Search pada array terurut adalah?",
+        "options": [
+          "O(1)",
+          "O(n)",
+          "O(log n)",
+          "O(n^2)"
+        ],
+        "answerIndex": 0,
+        "points": 20
+      },
+      {
+        "id": "qst-4",
+        "text": "Operasi LIFO (Last In First Out) merupakan prinsip kerja struktur data apa?",
+        "options": [
+          "Queue",
+          "Stack",
+          "Tree",
+          "Graph"
+        ],
+        "answerIndex": 1,
+        "points": 20
+      },
+      {
+        "id": "qst-5",
+        "text": "Manakah yang BUKAN merupakan 4 pilar utama Pemrograman Berorientasi Objek (OOP)?",
+        "options": [
+          "Encapsulation",
+          "Inheritance",
+          "Compilation",
+          "Polymorphism"
+        ],
+        "answerIndex": 2,
+        "points": 20
+      }
+    ],
+    "createdAt": "2026-11-21T08:24:55.958Z"
+  },
+  {
+    "id": "qiz-2",
+    "courseId": "crs-2",
+    "courseName": "Struktur Data",
+    "studyProgramId": "sp-1",
+    "studyProgramName": "Teknik Informatika",
+    "lecturerId": "lec-1",
+    "lecturerName": "Dr. Budi Santoso, M.Kom.",
+    "title": "UTS: Struktur Data & Kompleksitas Algoritma",
+    "type": "UTS",
+    "description": "Ujian Tengah Semester menguji Linked List, Stack, Queue, dan Tree.",
+    "startAt": "2026-11-01T08:00:00.000Z",
+    "endAt": "2027-01-31T23:59:59.000Z",
+    "durationMinutes": 60,
+    "published": true,
+    "questions": [
+      {
+        "id": "qst-6",
+        "text": "Struktur data linier yang elemen-elemennya terhubung melalui pointer disebut?",
+        "options": [
+          "Linked List",
+          "Array Statis",
+          "Hash Map",
+          "Binary Heap"
+        ],
+        "answerIndex": 0,
+        "points": 25
+      },
+      {
+        "id": "qst-7",
+        "text": "Operasi penambahan elemen pada Queue disebut?",
+        "options": [
+          "Push",
+          "Enqueue",
+          "Pop",
+          "Dequeue"
+        ],
+        "answerIndex": 1,
+        "points": 25
+      },
+      {
+        "id": "qst-8",
+        "text": "Traversal pada binary tree yang mengunjungi Root kemudian Left lalu Right adalah?",
+        "options": [
+          "Inorder",
+          "Postorder",
+          "Preorder",
+          "Level-order"
+        ],
+        "answerIndex": 2,
+        "points": 25
+      },
+      {
+        "id": "qst-9",
+        "text": "Keuntungan utama dari Doubly Linked List dibandingkan Singly Linked List adalah?",
+        "options": [
+          "Membutuhkan memori lebih sedikit",
+          "Dapat ditelusuri dua arah (maju dan mundur)",
+          "Tidak memerlukan pointer",
+          "Akses elemen acak O(1)"
+        ],
+        "answerIndex": 1,
+        "points": 25
+      }
+    ],
+    "createdAt": "2026-11-21T08:24:55.958Z"
+  }
+]

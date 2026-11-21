@@ -1,0 +1,22 @@
+[
+  {
+    "id": "bil-1",
+    "studentId": "stu-1",
+    "semesterId": "sem-1",
+    "uktGroup": 3,
+    "amount": 2500000,
+    "dueDate": "2026-10-15",
+    "status": "Lunas",
+    "createdAt": "2026-11-21T08:24:55.958Z"
+  },
+  {
+    "id": "bil-2",
+    "studentId": "stu-2",
+    "semesterId": "sem-1",
+    "uktGroup": 4,
+    "amount": 4000000,
+    "dueDate": "2026-10-15",
+    "status": "Belum Bayar",
+    "createdAt": "2026-11-21T08:24:55.958Z"
+  }
+]

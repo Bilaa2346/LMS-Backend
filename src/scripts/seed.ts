@@ -21,7 +21,7 @@ import type {
   AppNotification,
 } from "../models/entities";
 
-async function main() {
+export async function seedDatabase() {
   const now = new Date().toISOString();
 
   const faculties: Faculty[] = [
@@ -466,7 +466,9 @@ async function main() {
   console.log("Seed complete. Demo password: password123");
 }
 
-main().catch((err) => {
-  console.error(err);
-  process.exit(1);
-});
+if (require.main === module) {
+  seedDatabase().catch((err) => {
+    console.error(err);
+    process.exit(1);
+  });
+}

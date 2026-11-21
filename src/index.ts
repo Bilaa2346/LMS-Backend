@@ -54,16 +54,38 @@ app.use("/api/notifications", notificationsRoutes);
 app.use("/api/calendar", calendarRoutes);
 app.use("/api/students", studentsRoutes);
 
+import { readJson } from "./data/db";
+import { seedDatabase } from "./scripts/seed";
+
 // 404 + error handling
 app.use(notFound);
 app.use(errorHandler);
 
-if (process.env.VERCEL !== "1") {
-  app.listen(config.port, () => {
+// Auto-seed if database is empty or not initialized
+async function ensureDatabaseInitialized() {
+  try {
+    const users = await readJson("users");
+    if (!users || users.length === 0) {
+      // eslint-disable-next-line no-console
+      console.log("Empty database detected. Auto-seeding initial campus data...");
+      await seedDatabase();
+      // eslint-disable-next-line no-console
+      console.log("Database initialized successfully.");
+    }
+  } catch (err) {
     // eslint-disable-next-line no-console
-    console.log(
-      `LMS API running on http://localhost:${config.port} (${config.nodeEnv})`
-    );
+    console.error("Database initialization check failed:", err);
+  }
+}
+
+if (process.env.VERCEL !== "1") {
+  ensureDatabaseInitialized().finally(() => {
+    app.listen(config.port, "0.0.0.0", () => {
+      // eslint-disable-next-line no-console
+      console.log(
+        `LMS API running on http://0.0.0.0:${config.port} (${config.nodeEnv})`
+      );
+    });
   });
 }
 

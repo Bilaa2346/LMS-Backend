@@ -1,0 +1,72 @@
+[
+  {
+    "id": "notif-1",
+    "recipientRole": "student",
+    "recipientStudyProgramId": "sp-1",
+    "title": "Tugas Baru: Analisis Kompleksitas & Algoritma Rekursif",
+    "message": "Dr. Budi Santoso, M.Kom. telah mengunggah tugas baru pada mata kuliah Pemrograman Dasar. Batas pengumpulan: 28 Nov 2026.",
+    "type": "assignment",
+    "actionUrl": "/assignments",
+    "readUserIds": [
+      "usr-stu-1",
+      "usr-lec-1"
+    ],
+    "createdAt": "2026-11-20T08:00:00.000Z"
+  },
+  {
+    "id": "notif-2",
+    "recipientRole": "student",
+    "recipientStudyProgramId": "sp-1",
+    "title": "Kuis 1 Telah Dibuka: Konsep Dasar Pemrograman",
+    "message": "Kuis 1 Pemrograman Dasar telah dapat dikerjakan. Durasi pengerjaan: 30 menit.",
+    "type": "quiz",
+    "actionUrl": "/quizzes",
+    "readUserIds": [
+      "usr-stu-1",
+      "usr-lec-1"
+    ],
+    "createdAt": "2026-11-20T09:00:00.000Z"
+  },
+  {
+    "id": "notif-3",
+    "recipientRole": "student",
+    "recipientUserId": "usr-stu-1",
+    "title": "Pembayaran UKT Berhasil Diverifikasi",
+    "message": "Pembayaran UKT Semester Ganjil 2026/2027 sebesar Rp 2.500.000 telah terverifikasi LUNAS.",
+    "type": "ukt",
+    "actionUrl": "/ukt",
+    "readUserIds": [
+      "usr-stu-1",
+      "usr-lec-1"
+    ],
+    "createdAt": "2026-11-20T11:00:00.000Z"
+  },
+  {
+    "id": "notif-4",
+    "recipientRole": "student",
+    "recipientUserId": "usr-stu-1",
+    "title": "Nilai Tugas Diterbitkan: Tugas 1 Pemrograman Dasar",
+    "message": "Tugas Anda telah dinilai oleh Dr. Budi Santoso, M.Kom. Nilai perolehan: 92 / 100.",
+    "type": "grade",
+    "actionUrl": "/assignments",
+    "readUserIds": [
+      "usr-stu-1",
+      "usr-lec-1"
+    ],
+    "createdAt": "2026-11-20T16:05:00.000Z"
+  },
+  {
+    "id": "notif-5",
+    "recipientRole": "lecturer",
+    "recipientUserId": "usr-lec-1",
+    "title": "Pengumpulan Tugas Baru: Pemrograman Dasar",
+    "message": "Mahasiswa Andi Pratama (NIM: 2023101001) telah mengumpulkan Tugas 1: Analisis Kompleksitas & Algoritma Rekursif.",
+    "type": "submission",
+    "actionUrl": "/assignments",
+    "readUserIds": [
+      "usr-stu-1",
+      "usr-lec-1"
+    ],
+    "createdAt": "2026-11-20T10:16:00.000Z"
+  }
+]

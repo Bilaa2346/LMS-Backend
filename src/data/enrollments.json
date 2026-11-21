@@ -1,0 +1,26 @@
+[
+  {
+    "id": "enr-1",
+    "studentId": "stu-1",
+    "classId": "cls-1",
+    "semesterId": "sem-1",
+    "status": "Disetujui",
+    "createdAt": "2026-11-21T08:24:55.958Z"
+  },
+  {
+    "id": "enr-2",
+    "studentId": "stu-1",
+    "classId": "cls-2",
+    "semesterId": "sem-1",
+    "status": "Disetujui",
+    "createdAt": "2026-11-21T08:24:55.958Z"
+  },
+  {
+    "id": "enr-3",
+    "studentId": "stu-2",
+    "classId": "cls-3",
+    "semesterId": "sem-1",
+    "status": "Menunggu",
+    "createdAt": "2026-11-21T08:24:55.958Z"
+  }
+]

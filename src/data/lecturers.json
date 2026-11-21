@@ -1,0 +1,20 @@
+[
+  {
+    "id": "lec-1",
+    "nidn": "0010010001",
+    "name": "Dr. Budi Santoso, M.Kom.",
+    "email": "dosen@kampus.ac.id",
+    "studyProgramId": "sp-1",
+    "expertise": "Pemrograman & Algoritma",
+    "position": "Lektor"
+  },
+  {
+    "id": "lec-2",
+    "nidn": "0020020002",
+    "name": "Dr. Siti Rahmawati, M.T.",
+    "email": "dosen2@kampus.ac.id",
+    "studyProgramId": "sp-2",
+    "expertise": "Sistem Informasi",
+    "position": "Lektor"
+  }
+]

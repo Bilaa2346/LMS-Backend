@@ -1,0 +1,16 @@
+[
+  {
+    "id": "sp-1",
+    "facultyId": "fac-1",
+    "code": "IF",
+    "name": "Teknik Informatika",
+    "degree": "S1"
+  },
+  {
+    "id": "sp-2",
+    "facultyId": "fac-1",
+    "code": "SI",
+    "name": "Sistem Informasi",
+    "degree": "S1"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "id": "pay-1",
+    "billId": "bil-1",
+    "studentId": "stu-1",
+    "method": "Virtual Account BNI",
+    "vaNumber": "88082023101001",
+    "amount": 2500000,
+    "status": "Terverifikasi",
+    "paidAt": "2026-09-20",
+    "verifiedAt": "2026-09-22",
+    "verifiedBy": "usr-admin"
+  }
+]

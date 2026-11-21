@@ -1,0 +1,82 @@
+[
+  {
+    "id": "cal-1",
+    "title": "Masa Pengisian & Revisi KRS Semester Ganjil",
+    "description": "Periode pemilihan mata kuliah dan konsultasi rencana studi bersama Dosen Pembimbing Akademik (DPA).",
+    "startDate": "2026-09-01",
+    "endDate": "2026-09-15",
+    "category": "KRS",
+    "semesterId": "sem-1",
+    "authorName": "Biro Administrasi Akademik"
+  },
+  {
+    "id": "cal-2",
+    "title": "Awal Perkuliahan & Pertemuan Tatap Muka Pekan 1",
+    "description": "Perkuliahan aktif semester ganjil dimulai untuk seluruh program studi dan jenjang.",
+    "startDate": "2026-09-22",
+    "endDate": "2026-09-26",
+    "category": "Perkuliahan",
+    "semesterId": "sem-1",
+    "authorName": "Biro Akademik & Kemahasiswaan"
+  },
+  {
+    "id": "cal-3",
+    "title": "Batas Akhir Pembayaran Uang Kuliah Tunggal (UKT)",
+    "description": "Batas akhir pelunasan UKT tahap 1 bagi seluruh mahasiswa aktif.",
+    "startDate": "2026-10-10",
+    "endDate": "2026-10-15",
+    "category": "UKT",
+    "semesterId": "sem-1",
+    "authorName": "Bagian Keuangan Kampus"
+  },
+  {
+    "id": "cal-4",
+    "title": "Ujian Tengah Semester (UTS) Ganjil",
+    "description": "Pekan evaluasi pembelajaran tengah semester berbasis Computer-Based Test (CBT) dan asesmen tugas proyek.",
+    "startDate": "2026-11-02",
+    "endDate": "2026-11-13",
+    "category": "Ujian",
+    "semesterId": "sem-1",
+    "authorName": "Biro Administrasi Akademik"
+  },
+  {
+    "id": "cal-5",
+    "title": "Pekan Kuliah Pengganti & Review Materi Kuliah",
+    "description": "Sesi penguatan materi dan penyelesaian materi kuliah sebelum Ujian Akhir Semester.",
+    "startDate": "2026-12-14",
+    "endDate": "2026-12-19",
+    "category": "Perkuliahan",
+    "semesterId": "sem-1",
+    "authorName": "Dosen Pengampu Fakultas"
+  },
+  {
+    "id": "cal-6",
+    "title": "Cuti Bersama & Libur Hari Raya Natal",
+    "description": "Libur resmi nasional dan cuti bersama kampus.",
+    "startDate": "2026-12-24",
+    "endDate": "2026-12-26",
+    "category": "Libur",
+    "semesterId": "sem-1",
+    "authorName": "Rektorat"
+  },
+  {
+    "id": "cal-7",
+    "title": "Ujian Akhir Semester (UAS) Ganjil",
+    "description": "Pelaksanaan evaluasi akhir semester untuk penentuan nilai KHS dan Indeks Prestasi Semester (IPS).",
+    "startDate": "2027-01-04",
+    "endDate": "2027-01-16",
+    "category": "Ujian",
+    "semesterId": "sem-1",
+    "authorName": "Biro Administrasi Akademik"
+  },
+  {
+    "id": "cal-8",
+    "title": "Yudisium & Pengumuman Hasil Studi (KHS)",
+    "description": "Rapat yudisium kelulusan mata kuliah dan penerbitan Kartu Hasil Studi (KHS) digital.",
+    "startDate": "2027-01-25",
+    "endDate": "2027-01-28",
+    "category": "Yudisium",
+    "semesterId": "sem-1",
+    "authorName": "Fakultas Ilmu Komputer"
+  }
+]
