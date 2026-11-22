@@ -60,8 +60,18 @@ app.use((req, _res, next) => {
 app.use(express.json());
 app.use(cookieParser());
 
-// Routes
-app.get("/api/health", (_req, res) => res.json({ status: "ok" }));
+// Root & Healthcheck endpoints for Railway / cloud deployment checks
+app.get("/", (_req, res) => {
+  res.status(200).json({
+    status: "ok",
+    service: "LMS Backend API",
+    version: "1.0.0",
+    uptime: process.uptime(),
+    timestamp: new Date().toISOString(),
+  });
+});
+app.get("/health", (_req, res) => res.status(200).json({ status: "ok" }));
+app.get("/api/health", (_req, res) => res.status(200).json({ status: "ok" }));
 app.use("/api/auth", authRoutes);
 app.use("/api/dashboard", dashboardRoutes);
 app.use("/api/quizzes", quizzesRoutes);
@@ -97,12 +107,32 @@ async function ensureDatabaseInitialized() {
 
 if (process.env.VERCEL !== "1") {
   ensureDatabaseInitialized().finally(() => {
-    app.listen(config.port, "0.0.0.0", () => {
+    const server = app.listen(config.port, "0.0.0.0", () => {
       // eslint-disable-next-line no-console
       console.log(
         `LMS API running on http://0.0.0.0:${config.port} (${config.nodeEnv})`
       );
     });
+
+    // Graceful shutdown handling for Railway, Docker & Kubernetes
+    const handleShutdown = (signal: string) => {
+      // eslint-disable-next-line no-console
+      console.log(`Received ${signal}. Gracefully shutting down HTTP server...`);
+      server.close(() => {
+        // eslint-disable-next-line no-console
+        console.log("HTTP server closed successfully.");
+        process.exit(0);
+      });
+      // Force shutdown after 10s if connections refuse to close
+      setTimeout(() => {
+        // eslint-disable-next-line no-console
+        console.error("Forceful shutdown after timeout.");
+        process.exit(0);
+      }, 10000).unref();
+    };
+
+    process.on("SIGTERM", () => handleShutdown("SIGTERM"));
+    process.on("SIGINT", () => handleShutdown("SIGINT"));
   });
 }
 

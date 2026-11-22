@@ -16,6 +16,7 @@ import { requireAuth, requireRole } from "../middleware/auth";
 import { sendSuccess, sendError } from "../utils/envelope";
 import { createId } from "../utils/ids";
 import { addNotification } from "../utils/notifications";
+import { syncStudentGpa } from "../utils/academicGrade";
 
 const router = Router();
 
@@ -514,6 +515,11 @@ router.post(
       }
 
       await writeJson("quizAttempts", attempts);
+
+      // Sinkronisasi otomatis IPK mahasiswa berdasarkan formula penilaian baru
+      if (req.user?.refId) {
+        await syncStudentGpa(req.user.refId);
+      }
 
       const percentage = maxScore > 0 ? Math.round((totalScore / maxScore) * 100) : 0;
 

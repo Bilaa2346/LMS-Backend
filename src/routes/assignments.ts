@@ -15,6 +15,7 @@ import { requireAuth, requireRole } from "../middleware/auth";
 import { sendSuccess, sendError } from "../utils/envelope";
 import { createId } from "../utils/ids";
 import { addNotification } from "../utils/notifications";
+import { syncStudentGpa } from "../utils/academicGrade";
 
 const router = Router();
 
@@ -456,6 +457,9 @@ router.put(
 
       submissions[subIdx] = sub;
       await writeJson("submissions", submissions);
+
+      // Sinkronisasi otomatis IPK mahasiswa berdasarkan formula penilaian baru
+      await syncStudentGpa(sub.studentId);
 
       // Find user id for student
       const studentUser = users.find((u) => u.refId === sub.studentId);
