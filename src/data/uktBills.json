@@ -7,7 +7,7 @@
     "amount": 2500000,
     "dueDate": "2026-10-15",
     "status": "Lunas",
-    "createdAt": "2026-11-21T08:24:55.958Z"
+    "createdAt": "2026-09-01T08:00:00.000Z"
   },
   {
     "id": "bil-2",
@@ -16,7 +16,57 @@
     "uktGroup": 4,
     "amount": 4000000,
     "dueDate": "2026-10-15",
+    "status": "Menunggu Verifikasi",
+    "createdAt": "2026-09-01T08:00:00.000Z"
+  },
+  {
+    "id": "bil-3",
+    "studentId": "stu-3",
+    "semesterId": "sem-1",
+    "uktGroup": 3,
+    "amount": 2500000,
+    "dueDate": "2026-12-15",
     "status": "Belum Bayar",
-    "createdAt": "2026-11-21T08:24:55.958Z"
+    "createdAt": "2026-09-01T08:00:00.000Z"
+  },
+  {
+    "id": "bil-4",
+    "studentId": "stu-4",
+    "semesterId": "sem-1",
+    "uktGroup": 2,
+    "amount": 1500000,
+    "dueDate": "2026-10-15",
+    "status": "Lunas",
+    "createdAt": "2026-09-01T08:00:00.000Z"
+  },
+  {
+    "id": "bil-5",
+    "studentId": "stu-5",
+    "semesterId": "sem-1",
+    "uktGroup": 5,
+    "amount": 5500000,
+    "dueDate": "2026-12-15",
+    "status": "Belum Bayar",
+    "createdAt": "2026-09-01T08:00:00.000Z"
+  },
+  {
+    "id": "bil-6",
+    "studentId": "stu-6",
+    "semesterId": "sem-1",
+    "uktGroup": 3,
+    "amount": 2500000,
+    "dueDate": "2026-10-15",
+    "status": "Menunggu Verifikasi",
+    "createdAt": "2026-09-01T08:00:00.000Z"
+  },
+  {
+    "id": "bil-7",
+    "studentId": "stu-7",
+    "semesterId": "sem-1",
+    "uktGroup": 4,
+    "amount": 4000000,
+    "dueDate": "2026-12-15",
+    "status": "Belum Bayar",
+    "createdAt": "2026-09-01T08:00:00.000Z"
   }
 ]

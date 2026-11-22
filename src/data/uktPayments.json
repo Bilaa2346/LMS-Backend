@@ -7,8 +7,44 @@
     "vaNumber": "88082023101001",
     "amount": 2500000,
     "status": "Terverifikasi",
-    "paidAt": "2026-09-20",
-    "verifiedAt": "2026-09-22",
+    "paidAt": "2026-09-20T11:24:00.000Z",
+    "verifiedAt": "2026-09-22T09:00:00.000Z",
     "verifiedBy": "usr-admin"
+  },
+  {
+    "id": "pay-2",
+    "billId": "bil-2",
+    "studentId": "stu-2",
+    "method": "Virtual Account Mandiri",
+    "vaNumber": "89502023102002",
+    "amount": 4000000,
+    "status": "Menunggu Verifikasi",
+    "paidAt": "2026-11-20T10:15:00.000Z",
+    "verifiedAt": null,
+    "verifiedBy": null
+  },
+  {
+    "id": "pay-4",
+    "billId": "bil-4",
+    "studentId": "stu-4",
+    "method": "Virtual Account BCA",
+    "vaNumber": "12342024101028",
+    "amount": 1500000,
+    "status": "Terverifikasi",
+    "paidAt": "2026-10-01T14:10:00.000Z",
+    "verifiedAt": "2026-10-02T08:30:00.000Z",
+    "verifiedBy": "usr-admin"
+  },
+  {
+    "id": "pay-6",
+    "billId": "bil-6",
+    "studentId": "stu-6",
+    "method": "Virtual Account BRI",
+    "vaNumber": "00202024101035",
+    "amount": 2500000,
+    "status": "Menunggu Verifikasi",
+    "paidAt": "2026-11-21T14:30:00.000Z",
+    "verifiedAt": null,
+    "verifiedBy": null
   }
 ]

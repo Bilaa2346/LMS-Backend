@@ -10,6 +10,7 @@ import assignmentsRoutes from "./routes/assignments";
 import notificationsRoutes from "./routes/notifications";
 import calendarRoutes from "./routes/calendar";
 import studentsRoutes from "./routes/students";
+import uktRoutes from "./routes/ukt";
 import notFound from "./middleware/notFound";
 import errorHandler from "./middleware/error";
 
@@ -68,6 +69,7 @@ app.use("/api/assignments", assignmentsRoutes);
 app.use("/api/notifications", notificationsRoutes);
 app.use("/api/calendar", calendarRoutes);
 app.use("/api/students", studentsRoutes);
+app.use("/api/ukt", uktRoutes);
 
 import { readJson } from "./data/db";
 import { seedDatabase } from "./scripts/seed";
