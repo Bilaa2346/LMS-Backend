@@ -57,6 +57,15 @@ router.post("/login", async (req, res, next) => {
       return sendError(res, "Email atau password salah", 401);
     }
 
+    // Blokir akses login jika akun user berstatus nonaktif (deactivated)
+    if (user.status === "inactive" || user.isActive === false) {
+      return sendError(
+        res,
+        "Akun Anda telah dinonaktifkan oleh administrator. Akses login ditolak. Silakan hubungi BAAK / pihak kampus.",
+        403
+      );
+    }
+
     const token = signToken({
       id: user.id,
       role: user.role,
@@ -100,6 +109,9 @@ router.get("/me", requireAuth, async (req, res, next) => {
     const user = users.find((u) => u.id === req.user!.id);
     if (!user) {
       return sendError(res, "Pengguna tidak ditemukan", 404);
+    }
+    if (user.status === "inactive" || user.isActive === false) {
+      return sendError(res, "Akun Anda telah dinonaktifkan oleh administrator.", 403);
     }
     const profile = await profileFor(user);
     return sendSuccess(res, { user: toSafeUser(user), profile });

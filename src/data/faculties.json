@@ -2,11 +2,21 @@
   {
     "id": "fac-1",
     "code": "FIK",
-    "name": "Fakultas Ilmu Komputer"
+    "name": "Fakultas Ilmu Komputer",
+    "dean": "Dr. Ahmad Wijaya, M.Kom.",
+    "email": "fik@kampus.ac.id",
+    "description": "Fakultas bidang ilmu komputer dan informatika terapan.",
+    "status": "active",
+    "isActive": true
   },
   {
     "id": "fac-2",
     "code": "FEB",
-    "name": "Fakultas Ekonomi dan Bisnis"
+    "name": "Fakultas Ekonomi dan Bisnis",
+    "dean": "Dr. Citra Maharani, S.E., M.M.",
+    "email": "feb@kampus.ac.id",
+    "description": "Fakultas bisnis, manajemen, dan ekonomi pembangunan.",
+    "status": "active",
+    "isActive": true
   }
 ]

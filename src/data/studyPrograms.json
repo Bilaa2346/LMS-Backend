@@ -4,13 +4,17 @@
     "facultyId": "fac-1",
     "code": "IF",
     "name": "Teknik Informatika",
-    "degree": "S1"
+    "degree": "S1",
+    "status": "active",
+    "isActive": true
   },
   {
     "id": "sp-2",
     "facultyId": "fac-1",
     "code": "SI",
     "name": "Sistem Informasi",
-    "degree": "S1"
+    "degree": "S1",
+    "status": "active",
+    "isActive": true
   }
 ]

@@ -11,6 +11,8 @@ import notificationsRoutes from "./routes/notifications";
 import calendarRoutes from "./routes/calendar";
 import studentsRoutes from "./routes/students";
 import uktRoutes from "./routes/ukt";
+import usersRoutes from "./routes/users";
+import facultiesRoutes from "./routes/faculties";
 import notFound from "./middleware/notFound";
 import errorHandler from "./middleware/error";
 
@@ -80,6 +82,8 @@ app.use("/api/notifications", notificationsRoutes);
 app.use("/api/calendar", calendarRoutes);
 app.use("/api/students", studentsRoutes);
 app.use("/api/ukt", uktRoutes);
+app.use("/api/users", usersRoutes);
+app.use("/api/faculties", facultiesRoutes);
 
 import { readJson } from "./data/db";
 import { seedDatabase } from "./scripts/seed";

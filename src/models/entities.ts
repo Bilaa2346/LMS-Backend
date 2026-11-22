@@ -8,6 +8,8 @@ export interface User {
   name: string;
   refId: string | null; // student or lecturer id, null for admin
   avatar?: string;
+  status?: "active" | "inactive";
+  isActive?: boolean;
   createdAt: string;
 }
 
@@ -15,6 +17,12 @@ export interface Faculty {
   id: string;
   code: string;
   name: string;
+  dean?: string;
+  email?: string;
+  description?: string;
+  status?: "active" | "inactive";
+  isActive?: boolean;
+  createdAt?: string;
 }
 
 export interface StudyProgram {
@@ -23,6 +31,10 @@ export interface StudyProgram {
   code: string;
   name: string;
   degree: string;
+  headOfProgram?: string;
+  status?: "active" | "inactive";
+  isActive?: boolean;
+  createdAt?: string;
 }
 
 export interface Semester {

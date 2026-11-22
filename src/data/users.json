@@ -6,6 +6,8 @@
     "role": "admin",
     "name": "Admin BAAK",
     "refId": null,
+    "status": "active",
+    "isActive": true,
     "createdAt": "2026-11-21T08:24:55.958Z"
   },
   {
@@ -15,6 +17,8 @@
     "role": "lecturer",
     "name": "Dr. Budi Santoso, M.Kom.",
     "refId": "lec-1",
+    "status": "active",
+    "isActive": true,
     "createdAt": "2026-11-21T08:24:55.958Z"
   },
   {
@@ -24,6 +28,8 @@
     "role": "lecturer",
     "name": "Dr. Siti Rahmawati, M.T.",
     "refId": "lec-2",
+    "status": "active",
+    "isActive": true,
     "createdAt": "2026-11-21T08:24:55.958Z"
   },
   {
@@ -33,6 +39,8 @@
     "role": "student",
     "name": "Andi Pratama",
     "refId": "stu-1",
+    "status": "active",
+    "isActive": true,
     "createdAt": "2026-11-21T08:24:55.958Z"
   },
   {
@@ -42,6 +50,8 @@
     "role": "student",
     "name": "Dewi Lestari",
     "refId": "stu-2",
+    "status": "active",
+    "isActive": true,
     "createdAt": "2026-11-21T08:24:55.958Z"
   }
 ]
