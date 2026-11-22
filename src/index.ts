@@ -46,8 +46,6 @@ const corsOptions: cors.CorsOptions = {
 };
 
 app.use(cors(corsOptions));
-// Handle preflight requests
-app.options("*", cors(corsOptions));
 
 // Request logging for production visibility in Railway logs
 app.use((req, _res, next) => {
