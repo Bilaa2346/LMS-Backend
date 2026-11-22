@@ -175,11 +175,11 @@ router.get("/mine", requireAuth, async (req, res, next) => {
   }
 });
 
-// POST /api/quizzes — create quiz (lecturer/admin)
+// POST /api/quizzes — create quiz (lecturer only, admin is read-only)
 router.post(
   "/",
   requireAuth,
-  requireRole("lecturer", "admin"),
+  requireRole("lecturer"),
   async (req, res, next) => {
     try {
       const questionSchema = z.object({
@@ -316,11 +316,11 @@ router.get("/:id", requireAuth, async (req, res, next) => {
   }
 });
 
-// PUT /api/quizzes/:id — update or publish/unpublish quiz
+// PUT /api/quizzes/:id — update or publish/unpublish quiz (lecturer only)
 router.put(
   "/:id",
   requireAuth,
-  requireRole("lecturer", "admin"),
+  requireRole("lecturer"),
   async (req, res, next) => {
     try {
       const quizzes = await readJson<Quiz>("quizzes");
@@ -359,11 +359,11 @@ router.put(
   }
 );
 
-// DELETE /api/quizzes/:id — delete quiz
+// DELETE /api/quizzes/:id — delete quiz (lecturer only)
 router.delete(
   "/:id",
   requireAuth,
-  requireRole("lecturer", "admin"),
+  requireRole("lecturer"),
   async (req, res, next) => {
     try {
       const quizzes = await readJson<Quiz>("quizzes");

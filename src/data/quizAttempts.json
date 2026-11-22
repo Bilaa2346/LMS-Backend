@@ -1,1 +1,20 @@
-[]
+[
+  {
+    "id": "atm-mwryzlal45c336d8",
+    "quizId": "qiz-1",
+    "studentId": "stu-1",
+    "studentName": "Andi Pratama",
+    "studentNim": "2023101001",
+    "answers": [
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "score": null,
+    "maxScore": 100,
+    "startedAt": "2026-11-22T15:06:39.118Z",
+    "submittedAt": null
+  }
+]

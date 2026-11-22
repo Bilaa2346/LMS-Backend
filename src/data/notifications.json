@@ -1,5 +1,32 @@
 [
   {
+    "id": "notif-1795359633282",
+    "title": "Status UKT: LUNAS Terverifikasi",
+    "message": "Selamat! Tagihan UKT Anda telah diverifikasi Lunas oleh Biro Administrasi Akademik.",
+    "type": "ukt",
+    "recipientRole": "student",
+    "recipientUserId": "stu-2",
+    "actionUrl": "/ukt",
+    "createdAt": "2026-11-22T15:00:33.274Z",
+    "readUserIds": [
+      "usr-stu-1"
+    ]
+  },
+  {
+    "id": "notif-mwry5z9rd184607e",
+    "recipientUserId": "usr-stu-1",
+    "recipientRole": "student",
+    "recipientStudyProgramId": null,
+    "title": "Nilai Tugas Diterbitkan: Tugas 1: Analisis Kompleksitas & Algoritma Rekursif",
+    "message": "Tugas Anda pada mata kuliah Pemrograman Dasar telah dinilai. Nilai: 91/100. Catatan: Implementasi fungsi rekursif sangat terstruktur dan rapi. Analisis kompleksitas Big-O sangat akurat. Pertahankan prestasinya!",
+    "type": "grade",
+    "actionUrl": "/assignments",
+    "readUserIds": [
+      "usr-stu-1"
+    ],
+    "createdAt": "2026-11-22T14:43:37.566Z"
+  },
+  {
     "id": "notif-1",
     "recipientRole": "student",
     "recipientStudyProgramId": "sp-1",

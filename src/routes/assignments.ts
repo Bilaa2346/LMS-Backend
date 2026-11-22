@@ -142,11 +142,11 @@ router.get("/mine", requireAuth, async (req, res, next) => {
   }
 });
 
-// POST /api/assignments — create assignment (Lecturer / Admin)
+// POST /api/assignments — create assignment (Lecturer only, admin is read-only)
 router.post(
   "/",
   requireAuth,
-  requireRole("lecturer", "admin"),
+  requireRole("lecturer"),
   async (req, res, next) => {
     try {
       const schema = z.object({
@@ -245,11 +245,11 @@ router.get("/:id", requireAuth, async (req, res, next) => {
   }
 });
 
-// PUT /api/assignments/:id — update assignment
+// PUT /api/assignments/:id — update assignment (Lecturer only)
 router.put(
   "/:id",
   requireAuth,
-  requireRole("lecturer", "admin"),
+  requireRole("lecturer"),
   async (req, res, next) => {
     try {
       const assignments = await readJson<Assignment>("assignments");
@@ -277,11 +277,11 @@ router.put(
   }
 );
 
-// DELETE /api/assignments/:id — delete assignment
+// DELETE /api/assignments/:id — delete assignment (Lecturer only)
 router.delete(
   "/:id",
   requireAuth,
-  requireRole("lecturer", "admin"),
+  requireRole("lecturer"),
   async (req, res, next) => {
     try {
       const assignments = await readJson<Assignment>("assignments");
@@ -419,11 +419,11 @@ router.get(
   }
 );
 
-// PUT /api/submissions/:id/grade — lecturer grades a submission
+// PUT /api/submissions/:id/grade — lecturer grades a submission (Lecturer only)
 router.put(
   "/submissions/:id/grade",
   requireAuth,
-  requireRole("lecturer", "admin"),
+  requireRole("lecturer"),
   async (req, res, next) => {
     try {
       const schema = z.object({
