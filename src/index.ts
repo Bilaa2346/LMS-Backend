@@ -62,6 +62,14 @@ app.use((req, _res, next) => {
 app.use(express.json());
 app.use(cookieParser());
 
+// URL sanitizing middleware: normalizes duplicate slashes (e.g. /api//ukt -> /api/ukt)
+app.use((req, _res, next) => {
+  if (req.url && req.url.includes("//")) {
+    req.url = req.url.replace(/\/{2,}/g, "/");
+  }
+  next();
+});
+
 // Root & Healthcheck endpoints for Railway / cloud deployment checks
 app.get("/", (_req, res) => {
   res.status(200).json({
@@ -74,16 +82,26 @@ app.get("/", (_req, res) => {
 });
 app.get("/health", (_req, res) => res.status(200).json({ status: "ok" }));
 app.get("/api/health", (_req, res) => res.status(200).json({ status: "ok" }));
-app.use("/api/auth", authRoutes);
-app.use("/api/dashboard", dashboardRoutes);
-app.use("/api/quizzes", quizzesRoutes);
-app.use("/api/assignments", assignmentsRoutes);
-app.use("/api/notifications", notificationsRoutes);
-app.use("/api/calendar", calendarRoutes);
-app.use("/api/students", studentsRoutes);
-app.use("/api/ukt", uktRoutes);
-app.use("/api/users", usersRoutes);
-app.use("/api/faculties", facultiesRoutes);
+
+// Route registrations: mount under BOTH `/api/<path>` AND `/<path>`
+// Guarantees compatibility regardless of whether client requests with /api prefix or not!
+const apiRouters: [string, express.Router][] = [
+  ["/auth", authRoutes],
+  ["/dashboard", dashboardRoutes],
+  ["/quizzes", quizzesRoutes],
+  ["/assignments", assignmentsRoutes],
+  ["/notifications", notificationsRoutes],
+  ["/calendar", calendarRoutes],
+  ["/students", studentsRoutes],
+  ["/ukt", uktRoutes],
+  ["/users", usersRoutes],
+  ["/faculties", facultiesRoutes],
+];
+
+for (const [routePath, routerHandler] of apiRouters) {
+  app.use(`/api${routePath}`, routerHandler);
+  app.use(routePath, routerHandler);
+}
 
 import { readJson } from "./data/db";
 import { seedDatabase } from "./scripts/seed";
