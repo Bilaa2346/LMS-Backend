@@ -128,34 +128,36 @@ async function ensureDatabaseInitialized() {
 }
 
 if (process.env.VERCEL !== "1") {
-  ensureDatabaseInitialized().finally(() => {
-    const server = app.listen(config.port, "0.0.0.0", () => {
-      // eslint-disable-next-line no-console
-      console.log(
-        `LMS API running on http://0.0.0.0:${config.port} (${config.nodeEnv})`
-      );
-    });
-
-    // Graceful shutdown handling for Railway, Docker & Kubernetes
-    const handleShutdown = (signal: string) => {
-      // eslint-disable-next-line no-console
-      console.log(`Received ${signal}. Gracefully shutting down HTTP server...`);
-      server.close(() => {
-        // eslint-disable-next-line no-console
-        console.log("HTTP server closed successfully.");
-        process.exit(0);
-      });
-      // Force shutdown after 10s if connections refuse to close
-      setTimeout(() => {
-        // eslint-disable-next-line no-console
-        console.error("Forceful shutdown after timeout.");
-        process.exit(0);
-      }, 10000).unref();
-    };
-
-    process.on("SIGTERM", () => handleShutdown("SIGTERM"));
-    process.on("SIGINT", () => handleShutdown("SIGINT"));
+  // Start server immediately so Railway / cloud healthcheck passes instantly
+  const server = app.listen(config.port, "0.0.0.0", () => {
+    // eslint-disable-next-line no-console
+    console.log(
+      `LMS API running on http://0.0.0.0:${config.port} (${config.nodeEnv})`
+    );
   });
+
+  // Run database initialization in background without delaying port binding
+  ensureDatabaseInitialized();
+
+  // Graceful shutdown handling for Railway, Docker & Kubernetes
+  const handleShutdown = (signal: string) => {
+    // eslint-disable-next-line no-console
+    console.log(`Received ${signal}. Gracefully shutting down HTTP server...`);
+    server.close(() => {
+      // eslint-disable-next-line no-console
+      console.log("HTTP server closed successfully.");
+      process.exit(0);
+    });
+    // Force shutdown after 10s if connections refuse to close
+    setTimeout(() => {
+      // eslint-disable-next-line no-console
+      console.error("Forceful shutdown after timeout.");
+      process.exit(0);
+    }, 10000).unref();
+  };
+
+  process.on("SIGTERM", () => handleShutdown("SIGTERM"));
+  process.on("SIGINT", () => handleShutdown("SIGINT"));
 }
 
 export default app;
