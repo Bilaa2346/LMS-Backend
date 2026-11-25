@@ -61,3 +61,4 @@ npm run dev               # starts API on http://localhost:5000
 - `GET  /api/notifications` — requires auth, list of notifications & unread count
 - `PUT  /api/notifications/:id/read` — mark single notification as read
 - `PUT  /api/notifications/read-all` — mark all notifications as read
+telah diedit oleh Anggi Syahputri
